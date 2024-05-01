@@ -5,4 +5,4 @@
 
     - [nyt_blm_bertopic_0_16.ipynb](https://github.com/zgrtgy/blm-in-nyt/blob/main/nyt_blm_bertopic_0_16.ipynb) showcases the code used to run BERTopic on the retrieved snippets, can be run on Google Colab with the NYT snippets saved as a csv dataframe placed in linked GDrive.
 
-    - "nyt_ngram_wordfreq_counter.py" showcases the code used to run ngram and word frequency analysis on the retrieved snippets.
+    - [nyt_ngram_wordfreq_counter.py](https://github.com/zgrtgy/blm-in-nyt/blob/main/nyt_ngram_wordfreq_counter.py) showcases the code used to run ngram and word frequency analysis on the retrieved snippets.
