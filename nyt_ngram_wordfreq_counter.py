@@ -7,7 +7,7 @@ file = pd.read_csv("dir/to/nyt/snippets")
 texts = []
 raw = []
 for x in file["text"]:
-        texts.append(x)
+        texts.append(x) # each member of texts is an NYT snippet
         raw.append(x) #keep the raw for comparison
 
 #%% Text clean-up, replace for easy operations, regex for complex
@@ -88,14 +88,13 @@ for k in texts_cleaned:
 #discard empty strings
 texts_string = [x for x in texts_string if x.strip()]
 
-#connect not's to the following word
+#connect "not"s to the following word, to preserve negative pairings, such as "not-guilty"
 for x in range(len(texts_string)):
     texts_string[x] = texts_string[x].replace(' not ', ' not-')
     texts_string[x] = re.sub('^not ', 'not-', texts_string[x])
 
-#%% word frequency counter
+#%% simple word frequency counter
 word_frequency = {}
-# for x in texts: #when running on unprocessed text
 for x in texts_string:
     for y in x.split():
         if y in word_frequency.keys():
